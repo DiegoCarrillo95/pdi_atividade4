@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1537642808 source:c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"pdi.h"
+
+1454005786 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\pdi.h
+	"imagem.h"
+	"base.h"
+	"cores.h"
+	"geometria.h"
+	"desenho.h"
+	"segmenta.h"
+	"filtros2d.h"
+
+1457547252 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\imagem.h
+
+1474553722 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\base.h
+	"imagem.h"
+
+1454599162 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\cores.h
+	"imagem.h"
+
+1450290290 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\geometria.h
+
+1450192554 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\desenho.h
+	"base.h"
+	"geometria.h"
+	"cores.h"
+	"imagem.h"
+
+1456173374 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\segmenta.h
+	"imagem.h"
+	"geometria.h"
+
+1456341986 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\filtros2d.h
+	"imagem.h"
+	"geometria.h"
+
+1454414418 source:c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\pdi.c
+	"imagem.c"
+	"base.c"
+	"cores.c"
+	"geometria.c"
+	"desenho.c"
+	"segmenta.c"
+	"filtros2d.c"
+
+1471622110 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\imagem.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"imagem.h"
+	"base.h"
+
+1474553620 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\base.c
+	<stdio.h>
+	<stdlib.h>
+	"base.h"
+	"filtros2d.h"
+
+1474553758 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\cores.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<math.h>
+	"base.h"
+	"cores.h"
+
+1450290282 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\geometria.c
+	"geometria.h"
+
+1450192314 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\desenho.c
+	"desenho.h"
+	<stdio.h>
+
+1475518528 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\segmenta.c
+	<stdio.h>
+	<stdlib.h>
+	"base.h"
+	"filtros2d.h"
+	"segmenta.h"
+
+1474553816 c:\users\diego\desktop\utfpr\9_periodo\processamento_digital_de_imagens\pdi_atividade4\filtros2d.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"base.h"
+	"filtros2d.h"
+
