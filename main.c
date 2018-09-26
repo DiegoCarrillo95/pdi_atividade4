@@ -2,14 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include "pdi.h"
+#include <math.h>
 
 /*============================================================================*/
 #define INPUT_IMAGE "150.bmp"
 
 #define THRESHOLD 0.2f
-#define ALTURA_MIN 0
-#define LARGURA_MIN 0
-#define N_PIXELS_MIN 3
+#define ALTURA_MIN 1
+#define LARGURA_MIN 1
+#define N_PIXELS_MIN 1
 /*============================================================================*/
 
 /*============================================================================*/
@@ -20,7 +21,7 @@ int main()
 
     char fileName[25];
 
-    for (int idx = 0;idx <5; idx++){
+    for (int idx = 1;idx <5; idx++){
 
         sprintf(fileName, "./%s.bmp", files[idx]);
         Imagem *img = abreImagem(fileName, 3);
@@ -58,7 +59,43 @@ int main()
         sprintf(fileName, "./resultados/%s-final.bmp", files[idx]);
         salvaImagem(img_ero, fileName);
 
-        printf("Num de componentes: %d\n", numComponentes);
+        int pixels = 0;
+        float variancia = 0;
+        float media = 0;
+        int desvioPadrao = 0;
+        int numArroz = 0;
+        int i;
+
+        for (i = 0; i < numComponentes; i++){
+            pixels += componentes[i].n_pixels;
+        }
+
+        media = pixels/numComponentes;
+
+        for (i = 0; i < numComponentes; i++){
+          int sub = (int) componentes[i].n_pixels - media;
+          variancia = variancia + sub*sub;
+        }
+
+        variancia = variancia / (numComponentes - 1);
+
+        desvioPadrao = sqrt(variancia);
+
+        numArroz = 0;
+
+        for (i = 0; i < numComponentes; i++){
+          if(componentes[i].n_pixels <= media){
+            numArroz++;
+
+          }else{
+            float n =componentes[i].n_pixels / (float) media;
+            numArroz += (int) (n + 0.5f);
+            //printf("rice correction: %f\n", n + 0.5f);    
+          }
+
+        }
+        
+        printf("Num de componentes: %d\n", numArroz);
 
         destroiImagem(img);
         destroiImagem(kernel);
